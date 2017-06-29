@@ -4,8 +4,9 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import android.view.View
+import android.widget.CheckBox
 import java.text.NumberFormat
-
+import kotlin.coroutines.experimental.EmptyCoroutineContext.plus
 
 
 class MainActivity : AppCompatActivity() {
@@ -69,6 +70,18 @@ class MainActivity : AppCompatActivity() {
      */
     private fun displayMessage(message: String) {
         val priceTextView = findViewById(R.id.price_text_view) as TextView
-        priceTextView.text = message
+        val checkBoxWhippedCream = findViewById(R.id.checkbox_whipped_cream) as CheckBox
+        val checkBoxChocolate = findViewById(R.id.checkbox_chocolate) as CheckBox
+        priceTextView.text = "Name: Harshal Bhavsar\n" + "Add whipped cream? " + checkBoxWhippedCream.isChecked
+        priceTextView.text = priceTextView.text as String + "\nAdd chocolate? " + checkBoxChocolate.isChecked +
+                "\nQuantity: " + quantity + "\n" +message
+    }
+
+    /**
+     * This method gets called when checkbox is tapped.
+     */
+    fun onCheckBoxClicked(view: View)
+    {
+
     }
 }

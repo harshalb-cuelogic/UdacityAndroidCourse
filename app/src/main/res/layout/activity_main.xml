@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,6 +13,33 @@
     android:orientation="vertical"
     android:layout_margin="16sp"
     tools:context="com.cuelogic.udacityandroidcourse.MainActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_toppings"
+        android:textAllCaps="true"
+        android:layout_marginBottom="16dp"
+        />
+
+        <CheckBox
+            android:id="@+id/checkbox_whipped_cream"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/whipped_cream"
+            android:layout_marginBottom="16dp"
+            android:textSize="16sp"
+            />
+
+    <CheckBox
+        android:id="@+id/checkbox_chocolate"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/chocolate"
+        android:layout_marginBottom="16dp"
+        android:textSize="16sp"
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -71,5 +104,7 @@
         android:text="@string/btn_title_order"
         android:layout_marginTop="0dp"
         android:onClick="submitOrder"
+        android:layout_marginBottom="16dp"
         />
 </LinearLayout>
+</ScrollView>
