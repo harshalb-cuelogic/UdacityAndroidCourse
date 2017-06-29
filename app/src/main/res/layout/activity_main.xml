@@ -14,12 +14,20 @@
     android:layout_margin="16sp"
     tools:context="com.cuelogic.udacityandroidcourse.MainActivity">
 
+    <EditText
+        android:id="@+id/edittext_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/name"
+        android:inputType="textCapWords"
+        />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/title_toppings"
         android:textAllCaps="true"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         />
 

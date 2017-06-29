@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.TextView
 import android.view.View
 import android.widget.CheckBox
+import android.widget.EditText
 import java.text.NumberFormat
 import kotlin.coroutines.experimental.EmptyCoroutineContext.plus
 
@@ -72,7 +73,8 @@ class MainActivity : AppCompatActivity() {
         val priceTextView = findViewById(R.id.price_text_view) as TextView
         val checkBoxWhippedCream = findViewById(R.id.checkbox_whipped_cream) as CheckBox
         val checkBoxChocolate = findViewById(R.id.checkbox_chocolate) as CheckBox
-        priceTextView.text = "Name: Harshal Bhavsar\n" + "Add whipped cream? " + checkBoxWhippedCream.isChecked
+        var edittextName = findViewById(R.id.edittext_name) as EditText
+        priceTextView.text = "Name: ${edittextName.text}\n" + "Add whipped cream? " + checkBoxWhippedCream.isChecked
         priceTextView.text = priceTextView.text as String + "\nAdd chocolate? " + checkBoxChocolate.isChecked +
                 "\nQuantity: " + quantity + "\n" +message
     }
